@@ -1,0 +1,564 @@
+/* Complementos visuais que seguem a identidade do site:
+   azul #1A2876, amarelo #F8B332, azul claro #E0F5FA. */
+
+.fx-msg {
+  width: 100%;
+  border-radius: 0.6rem;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.4rem;
+  line-height: 1.45;
+  margin-bottom: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fx-msg-erro {
+  background: #fdecec;
+  border: 1px solid #e5a1a1;
+  color: #8c1c1c;
+}
+.fx-msg-ok {
+  background: #eaf7ee;
+  border: 1px solid #9dcfae;
+  color: #14622f;
+}
+.fx-msg-aviso {
+  background: #fff6e3;
+  border: 1px solid #f8b332;
+  color: #7a5000;
+}
+
+.fx-erro-campo {
+  display: block;
+  color: #b02a2a;
+  font-size: 1.2rem;
+  margin-top: 0.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fx-input-invalido {
+  border-color: #b02a2a !important;
+}
+
+.fx-link-voltar {
+  display: inline-block;
+  margin-top: 1.6rem;
+  color: #1a2876;
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fx-link-voltar:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Página de confirmação / QR Code ---------- */
+.fx-page {
+  min-height: 100vh;
+  background: #e0f5fa;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 4rem 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+}
+.fx-card {
+  width: 100%;
+  max-width: 56rem;
+  background: #fff;
+  border-radius: 1rem;
+  padding: 3.5rem 3rem;
+  box-shadow: 0 1.2rem 3rem rgba(26, 40, 118, 0.12);
+  text-align: center;
+}
+.fx-card h1 {
+  font-size: 2.6rem;
+  color: #1a2876;
+  margin-bottom: 0.8rem;
+}
+.fx-card h1 span {
+  color: #f8b332;
+}
+.fx-card p.fx-sub {
+  font-size: 1.5rem;
+  color: #4a5568;
+  line-height: 1.5;
+  margin-bottom: 2.4rem;
+}
+.fx-qr-box {
+  display: inline-flex;
+  padding: 1.6rem;
+  background: #fff;
+  border: 0.3rem solid #1a2876;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.fx-qr-box img {
+  width: 24rem;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.fx-codigo {
+  font-size: 1.6rem;
+  letter-spacing: 0.15rem;
+  font-weight: 700;
+  color: #1a2876;
+  background: #e0f5fa;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  word-break: break-all;
+  margin-bottom: 2rem;
+}
+.fx-botao {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+  background: #1a2876;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 1.3rem 2.4rem;
+  border-radius: 0.6rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.2s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fx-botao:hover {
+  background: #101f74;
+  transform: translateY(-0.2rem);
+}
+.fx-botao-amarelo {
+  background: #f8b332;
+  color: #1a2876;
+}
+.fx-botao-amarelo:hover {
+  background: #f09b00;
+}
+.fx-botao-claro {
+  background: #fff;
+  color: #1a2876;
+  border: 0.15rem solid #1a2876;
+}
+.fx-botao-claro:hover {
+  background: #e0f5fa;
+}
+.fx-botao:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+.fx-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* ---------- Painel administrativo ---------- */
+.fx-painel {
+  width: 75rem;
+  max-width: 95%;
+  font-size: 10px;
+}
+.fx-cards-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+.fx-stat {
+  background: #fff;
+  border: 0.08rem solid #ddd;
+  border-radius: 0.6rem;
+  padding: 1.6rem;
+}
+.fx-stat span {
+  display: block;
+  font-size: 1.3rem;
+  color: #6b7280;
+  font-weight: 600;
+}
+.fx-stat strong {
+  display: block;
+  font-size: 2.8rem;
+  color: #233b8b;
+  margin-top: 0.4rem;
+}
+.fx-stat-ok strong {
+  color: #14622f;
+}
+.fx-stat-pend strong {
+  color: #b26b00;
+}
+
+.fx-abas {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.8rem;
+  border-bottom: 0.1rem solid #dcdcdc;
+  width: 100%;
+}
+.fx-aba {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6b7280;
+  padding: 1rem 0.2rem;
+  border-bottom: 0.3rem solid transparent;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fx-aba-ativa {
+  color: #233b8b;
+  border-bottom-color: #f8b332;
+}
+
+.fx-bloco {
+  background: #fff;
+  border: 0.08rem solid #ddd;
+  border-radius: 0.6rem;
+  padding: 2rem;
+  margin-top: 1.5rem;
+}
+.fx-bloco h2 {
+  font-size: 1.8rem;
+  color: #233b8b;
+  margin-bottom: 1.4rem;
+}
+.fx-filtros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.6rem;
+}
+.fx-filtros input,
+.fx-filtros select {
+  flex: 1 1 18rem;
+  min-width: 0;
+  height: 4.2rem;
+  padding: 0 1.2rem;
+  font-size: 1.4rem;
+  border: 0.1rem solid #9bbcf2;
+  border-radius: 0.5rem;
+  background: #f7fbff;
+  outline: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fx-filtros input:focus,
+.fx-filtros select:focus {
+  border-color: #1a2876;
+}
+
+.fx-tabela-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+.fx-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.35rem;
+  min-width: 60rem;
+}
+.fx-tabela th,
+.fx-tabela td {
+  text-align: left;
+  padding: 1.1rem 1rem;
+  border-bottom: 0.08rem solid #eee;
+  color: #333;
+}
+.fx-tabela th {
+  color: #233b8b;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+}
+.fx-tabela tr:hover td {
+  background: #f7fbff;
+}
+.fx-tag {
+  display: inline-block;
+  font-size: 1.15rem;
+  font-weight: 700;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+}
+.fx-tag-ok {
+  background: #eaf7ee;
+  color: #14622f;
+}
+.fx-tag-pend {
+  background: #fff6e3;
+  color: #7a5000;
+}
+.fx-btn-mini {
+  border: none;
+  cursor: pointer;
+  background: #1a2876;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.7rem 1.1rem;
+  border-radius: 0.4rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.fx-btn-mini:hover {
+  background: #101f74;
+}
+.fx-btn-mini-claro {
+  background: #e0f5fa;
+  color: #1a2876;
+}
+
+.fx-vazio {
+  font-size: 1.4rem;
+  color: #6b7280;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+/* Scanner */
+.fx-scanner-video {
+  width: 100%;
+  max-width: 42rem;
+  aspect-ratio: 1 / 1;
+  background: #0d1330;
+  border-radius: 0.8rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+.fx-detalhe {
+  text-align: left;
+  font-size: 1.4rem;
+  color: #333;
+  line-height: 1.6;
+}
+.fx-detalhe strong {
+  color: #233b8b;
+}
+.fx-detalhe-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 0.8rem 2rem;
+  margin-bottom: 1.6rem;
+}
+
+/* Modal de detalhes */
+.fx-modal-fundo {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 19, 48, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 50;
+  font-size: 10px;
+}
+.fx-modal {
+  background: #fff;
+  border-radius: 0.8rem;
+  padding: 2.4rem;
+  width: 100%;
+  max-width: 46rem;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.fx-modal h2 {
+  font-size: 1.9rem;
+  color: #233b8b;
+  margin-bottom: 1.4rem;
+}
+
+@media (max-width: 600px) {
+  .fx-card {
+    padding: 2.4rem 1.6rem;
+  }
+  .fx-abas {
+    gap: 1.2rem;
+  }
+  .fx-aba {
+    font-size: 1.35rem;
+  }
+}
+
+/* ---- Painel: cabeçalho, estatísticas e tabela ---- */
+.fx-painel-topo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.4rem;
+}
+.fx-painel-topo h1 {
+  font-family: "Saira Semi Condensed", "Inter", sans-serif;
+  font-size: 3rem;
+  color: #1a2876;
+  margin: 0;
+}
+.fx-painel-topo p {
+  margin: 0.4rem 0 0;
+  font-size: 1.4rem;
+  color: #4b5563;
+}
+.fx-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.6rem;
+  margin-bottom: 2.4rem;
+}
+.fx-stats .fx-stat {
+  background: #fff;
+  border: 1px solid #dbeafe;
+  border-radius: 14px;
+  padding: 1.8rem;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(26, 40, 118, 0.07);
+}
+.fx-stats .fx-stat strong {
+  display: block;
+  font-size: 3.2rem;
+  color: #1a2876;
+  line-height: 1.1;
+}
+.fx-stats .fx-stat span {
+  font-size: 1.3rem;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+.fx-bloco-topo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+.fx-bloco-topo h2 {
+  font-family: "Saira Semi Condensed", "Inter", sans-serif;
+  font-size: 2.2rem;
+  color: #1a2876;
+  margin: 0;
+}
+.fx-badge {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  background: #fdf1d7;
+  color: #8a5b00;
+}
+.fx-badge-ok {
+  background: #dcfce7;
+  color: #14653b;
+}
+.fx-botao-mini {
+  padding: 0.7rem 1.3rem;
+  font-size: 1.2rem;
+}
+.fx-codigo-inline {
+  font-family: ui-monospace, Menlo, Consolas, monospace;
+  font-size: 1.2rem;
+  background: #e0f5fa;
+  color: #1a2876;
+  padding: 0.3rem 0.7rem;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* Alinha o painel ao topo (o CSS legado centraliza o body) */
+body:has(.fx-painel) {
+  justify-content: flex-start;
+}
+.fx-painel {
+  margin: 0 auto;
+}
+.fx-tabela-wrap {
+  overflow-x: auto;
+}
+.fx-tabela {
+  min-width: 78rem;
+}
+
+/* ---- Seleção de sala e status de entradas ---- */
+.fx-sala-atual {
+  font-size: 1.4rem;
+  color: #1a2876;
+  background: #e0f5fa;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+}
+.fx-sala-atual-vazia {
+  background: #fdf1d7;
+  color: #8a5b00;
+}
+.fx-andar {
+  margin-bottom: 1.6rem;
+}
+.fx-andar-titulo {
+  font-family: "Saira Semi Condensed", "Inter", sans-serif;
+  font-size: 1.6rem;
+  color: #4b5563;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 0.8rem;
+}
+.fx-salas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.fx-sala-chip {
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 0.9rem 1.6rem;
+  border-radius: 12px;
+  border: 1px solid #dbeafe;
+  background: #fff;
+  color: #1a2876;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.fx-sala-chip:hover {
+  border-color: #1a2876;
+}
+.fx-sala-chip-ativa {
+  background: #1a2876;
+  border-color: #1a2876;
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(26, 40, 118, 0.25);
+}
+.fx-sala-banner {
+  background: #f8b332;
+  color: #3b2600;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 1rem 1.6rem;
+  margin-bottom: 1.4rem;
+  text-align: center;
+}
+.fx-salas-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  max-width: 34rem;
+}
+.fx-sala-tag {
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  background: #f3f4f6;
+  color: #6b7280;
+  white-space: nowrap;
+}
+.fx-sala-tag-ok {
+  background: #dcfce7;
+  color: #14653b;
+}

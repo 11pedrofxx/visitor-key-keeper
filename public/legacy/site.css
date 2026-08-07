@@ -1,0 +1,1363 @@
+*{
+
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+
+    font-family: "Montserrat", sans-serif;
+    background-color: #E0F5FA;
+
+}
+
+html{
+
+    font-size: 10px;
+    scroll-behavior: smooth;
+
+
+}
+
+.logoo{
+
+    width: 12rem;
+    margin-left: 2rem;
+    cursor: pointer;
+
+}
+
+a{
+
+    text-decoration: none;
+
+}
+
+header{
+
+    background-color: #E0F5FA;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+ul li{
+
+        list-style: none;
+        display: inline;
+        font-size: 2rem;
+        margin: 0.8rem;
+        font-family: "Montserrat", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        color: #101f74;
+
+}
+
+
+
+li:hover{
+
+    text-decoration: underline;
+    font-size: 2.5rem;
+    transform: scale(1.25);
+
+}
+
+.botao{
+
+    padding: 1.5rem;
+    background-color: #FABB33;
+    border: none;
+    border-radius: 1.4rem;
+    color: #1A2876;
+      font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  margin-right: 2rem;
+  transition: 0.2s ease;
+  font-size: 1.5rem;
+
+}
+
+.botao:hover{
+
+    transform: scale(1.1);
+
+}
+
+.espacofrase{
+
+height: 40rem;
+background-color: #1A2876;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+
+
+}
+
+.fraseefeito{
+
+color: white;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 6rem;
+  text-align: center;
+
+}
+
+span{
+
+    color: #FABB33;
+
+}
+
+.spandiferente{
+
+    color: #E0F5FA;
+
+}
+
+.botao1{
+
+        padding: 1.8rem;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 1.4rem;
+        color: #1A2876;
+        font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-right: 2rem;
+    transition: 0.2s ease;
+    font-size: 1.5rem;
+
+}
+
+.botao2{
+
+     padding: 1.8rem;
+    background-color: #FABB33;
+    border: none;
+    border-radius: 1.4rem;
+    color: #1A2876;
+      font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin-right: 2rem;
+  transition: 0.2s ease;
+
+}
+
+.botao1:hover{
+
+    transform: scale(1.1);
+
+
+}
+
+.botao2:hover{
+
+    transform: scale(1.1);
+
+
+}
+
+.conheca{
+
+    background-color: #E0F5FA;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+}
+
+.fraseefeito1{
+
+color: #1A2876;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 2rem;
+
+}
+
+.frasefrei{
+
+    color: #3749AE;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 3.5rem;
+  text-align: center;
+
+
+}
+
+.paii {
+    background-color: #CED4F4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 6rem 8rem;
+}
+
+.fraseleft {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.fraseleft h1 {
+    color: #1A2876;
+    font-family: "Montserrat", sans-serif;
+    font-size: 4.8rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.fraseleft p {
+    color: #1A2876;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 2.5rem;
+}
+
+.botao-veja-mais {
+    padding: 1.4rem 4rem;
+    background-color: #F8B332;
+    border: none;
+    border-radius: 1.2rem;
+    color: #101F74;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.2s ease, 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.botao-veja-mais:hover {
+    transform: scale(1.05);
+
+}
+
+.freiright {
+    background-color: #1A2876;
+    border-radius: 2.4rem;
+    padding: 2.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 46rem;
+}
+
+.fotoo {
+    width: 100%;
+    height: 40rem;
+    object-fit: cover;
+    border-radius: 1.8rem;
+    margin-bottom: 2.2rem;
+}
+
+.freiright h2 {
+    color: #F8B332;
+    font-family: "Montserrat", sans-serif;
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.freiright h3 {
+    color: #F8B332;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.espacoo{
+
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.Fraseestru{
+    
+    color: #1A2876;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+
+
+}
+
+.frasesalas{
+
+    color: #1A2876;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+
+}
+
+.quadrados{
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5rem;
+    padding: 0 3rem;
+    margin-bottom: 3rem;
+}
+
+.boxleft img{
+
+    width: 4rem;
+    margin-left: 4rem;
+
+}
+
+.topo{
+
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+
+}
+
+.boxleft p{
+
+    font-size: 2.2rem;
+    text-align: center;
+    color: black;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+.boxleft h1{
+
+    color: #000000;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.4em;
+
+}
+
+.boxleft{
+
+
+    width: 57rem;
+    height: 15rem;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+     background: #fff;
+    border-radius: 11px;
+    border: 1.5px solid #d9d9d9;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08),
+        0 8px 20px rgba(0, 0, 0, 0.06);
+
+}
+
+.boxright img{
+
+    width: 4rem;
+    margin-left: 3rem;
+
+}
+
+.topo{
+
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+
+}
+
+.boxright p{
+
+    font-size: 2.2rem;
+    text-align: center;
+    color: black;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+.boxright h1{
+
+    color: #000000;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.4em;
+
+}
+
+.boxright{
+
+
+    width: 57rem;
+    height: 15rem;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+     background: #fff;
+    border-radius: 11px;
+    border: 1.5px solid #d9d9d9;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08),
+        0 8px 20px rgba(0, 0, 0, 0.06);
+
+}
+
+
+.boxbaixa img{
+
+    width: 4rem;
+    margin-left: 3rem;
+
+}
+
+.topo{
+
+    display: flex;
+    gap: 6rem;
+    align-items: center;
+
+}
+
+.boxbaixa p{
+
+    font-size: 2.2rem;
+    text-align: center;
+    color: black;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+.boxbaixa h1{
+
+    color: #000000;
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.4em;
+
+}
+
+.boxbaixa{
+
+
+    width: 57rem;
+    flex-wrap: wrap;
+    display: flex;
+    height: 15rem;
+    align-items: center;
+     background: #fff;
+    border-radius: 11px;
+    border: 1.5px solid #d9d9d9;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.08),
+        0 8px 20px rgba(0, 0, 0, 0.06);
+
+}
+
+.Modric{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.wfrei{
+
+    margin-top: 2.8rem;
+    width: 380px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+
+}
+
+.frasedep{
+
+    color: #1A2876;
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+
+}
+
+.banner {
+    width: 100%;
+    min-height: 368px;
+    padding: 3rem 0;
+
+    background: linear-gradient(
+        180deg,
+        #E0F5FA 0%,
+        #C8E7F5 30%,
+        #7E9EF0 65%,
+        #1834D0 100%
+    );
+}
+
+.conteudo{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 4rem 0 7rem;
+
+}
+
+.fotodep{
+    flex: 0 0 auto;
+}
+
+.fotodep img{
+
+    width: 34rem;
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.textos{
+
+    display: flex;
+    flex: 1 1 0;
+    min-width: 0;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    max-width: 60rem;
+
+
+}
+
+.textos h3{
+
+      color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+
+}
+
+.textos p{
+
+      color: #ffffff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+
+}
+
+ .secao-como-chegar {
+            background-color: #E0F5FA;
+            padding-bottom: 10rem; /* Espaço no final da página */
+        }
+
+        /* Container principal que segura o Mapa e o Card */
+        .container-localizacao {
+            display: flex;
+            justify-content: center;
+            align-items: stretch; /* Importante: faz o mapa e o card terem a mesma altura */
+            gap: 4rem; /* Espaço entre mapa e card */
+            padding: 0 10rem; /* Margens laterais */
+            max-width: 1400px;
+            margin: 0 auto; /* Centraliza na tela */
+        }
+
+        /* Estilos do Mapa */
+        .mapa-feira {
+            width: 50%; /* Ocupa metade da largura */
+            border-radius: 15px;
+            overflow: hidden; /* Garante que a imagem não saia das bordas arredondadas */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            display: flex;
+        }
+
+        .mapa-feira img {
+            width: 100%;
+            height: 100%; /* Preenche toda a altura do container */
+            object-fit: cover; /* Mantém a proporção da imagem sem distorcer */
+        }
+
+        /* Estilos do Card Azul de Informações */
+        .card-infos {
+            width: 50%; /* Ocupa a outra metade */
+            background-color: #1A2876; /* Azul Escuro */
+            border-radius: 15px;
+            padding: 5rem;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centraliza o conteúdo verticalmente */
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card-infos h1 {
+            font-size: 3.3rem;
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: white;
+    font-family: "Montserrat", sans-serif;
+
+        }
+
+        .card-infos h3.subtitulo-card {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 4rem;
+            color: white;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        /* Bloco de informações (Data/Hora e Endereço) */
+        .bloco-info {
+            display: flex;
+            align-items: flex-start; /* Alinha ícone ao topo do texto */
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Estilo dos Ícones dentro do card */
+        .bloco-info img {
+            width: 3rem; /* Tamanho dos ícones */
+            height: 3rem;
+            object-fit: contain;
+            margin-top: 0.5rem; /* Ajuste fino de alinhamento vertical */
+        }
+
+        /* Texto dentro do bloco de info */
+        .texto-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .texto-info h4 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        .texto-info p {
+            font-size: 1.8rem;
+            font-weight: 400;
+            color: white;
+            line-height: 1.4;
+            font-family: "Montserrat", sans-serif;
+        }
+
+        /* Endereço completo em itálico no final */
+        .endereco-completo {
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 3rem;
+        }
+
+        .endereco-completo address {
+            font-style: normal; /* Remove o itálico padrão */
+            font-size: 1.6rem;
+            line-height: 1.6;
+            color: rgba(255,255,255,0.8);
+        }
+
+        .secao-cronograma {
+    font-family: 'Poppins', sans-serif; /* Fonte padrão moderna do site */
+}
+
+.container-cronograma {
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.cabecalho-cronograma {
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-bottom: 8rem; /* Espaço até a timeline */
+    width: 100%; /* Garante que ocupe toda a largura disponível */
+    display: block; /* Garante que o header se comporte como um bloco completo */
+}
+
+.titulo-cronograma {
+    color: #1A2876; /* Azul escuro padrão */
+    font-weight: 800; /* Bold */
+    font-size: 5rem;
+    margin-bottom: 2rem; /* Espaço até o subtítulo */
+    display: block; /* Garante que o h2 ocupe toda a largura */
+    width: 100%;
+}
+
+.subtitulo-cronograma {
+    color: #3749AE; /* Azul médio */
+    font-weight: 400;
+    font-size: 2.8rem;
+    max-width: 800px; /* Limita a largura para melhor leitura */
+    margin: 0 auto; /* Centraliza o parágrafo limitando a largura */
+    display: block; /* Garante que o p ocupe toda a largura permitida */
+    width: 100%;
+}
+
+/* Área da Timeline */
+.timeline-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Lista de Atividades */
+.lista-atividades {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Espaço entre as atividades */
+    position: relative;
+}
+
+/* Item de Atividade Individual (Flexbox) */
+.atividade-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Marcador de Timeline (Círculo Amarelo) */
+.marcador-timeline {
+    width: 6rem;
+    height: 6rem;
+    background-color: #F8B332; /* Amarelo padrão */
+    border-radius: 50%; /* Círculo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    margin-right: 4rem; /* Espaço até o card */
+    flex-shrink: 0; /* Não deixa o círculo diminuir */
+}
+
+/* Ícone dentro do Marcador */
+.icone-atividade {
+    font-size: 2.8rem;
+    color: #1A2876; /* Azul escuro padrão */
+}
+
+/* Card Branco de Atividade */
+.card-atividade {
+    flex: 1; /* Preenche o resto do espaço */
+    border-radius: 12px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Sombra suave padrão */
+    transition: all 0.3s ease;
+    border: 1px solid transparent; /* Para hover */
+}
+
+/* Efeito de Hover no Card */
+.atividade-item:hover .card-atividade {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    border-color: rgba(248, 179, 50, 0.2); /* Borda amarela sutil */
+}
+
+/* Texto de Horário dentro do Card */
+.card-atividade h3 {
+    font-size: 2.8rem;
+    font-weight: 800; /* Bold */
+    color: #1A2876; /* Azul escuro padrão */
+    margin-right: 4rem; /* Espaço até o texto da descrição */
+}
+
+/* Texto de Descrição dentro do Card */
+.card-atividade p {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* =========================================
+   ESTILOS EXCLUSIVOS: SEÇÃO CURSOS
+   (Prefixados com 'cs-' para isolamento total)
+   ========================================= */
+
+/* Base da Seção */
+.cs-secao {
+    background-color: #E0F5FA; /* Cor de fundo padrão do site */
+    padding: 100px 0;          /* Espaçamento generoso */
+    width: 100%;
+    font-family: "Montserrat", sans-serif; /* Fonte padrão */
+    overflow: hidden;
+}
+
+/* Container padrão */
+.cs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* --- Cabeçalho Principal (Design do Site) --- */
+.cs-header-principal {
+    text-align: center;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column; /* Garante que os elementos fiquem um embaixo do outro */
+    align-items: center;
+}
+
+.cs-titulo-principal {
+    color: #1A2876;   /* Azul escuro padrão */
+    font-size: 50px;  /* Tamanho grande */
+    font-weight: 700; /* Bold */
+    margin-bottom: 20px; /* Espaço até o subtítulo */
+}
+
+.cs-subtitulo-principal {
+    color: #3749AE;   /* Azul médio padrão */
+    font-size: 28px;
+    font-weight: 300; /* Light */
+    max-width: 900px;
+    margin: 0 auto;   /* Centraliza o parágrafo limitando a largura */
+    line-height: 1.4;
+}
+
+/* --- Wrapper de Categorias --- */
+.cs-categorias-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 80px; /* Espaço entre as categorias */
+}
+
+/* Bloco de Categoria (Título + Grid) */
+.cs-categoria-bloco {
+    width: 100%;
+}
+
+/* Subtítulo da Categoria (ex: Cursos Técnicos) */
+.cs-subtitulo-categoria {
+    font-size: 36px;
+    font-weight: 800;
+    color: #1A2876; /* Azul escuro padrão */
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Linha decorativa amarela embaixo do subtítulo */
+.cs-subtitulo-categoria::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #F8B332; /* Amarelo padrão */
+    border-radius: 2px;
+    margin: 10px auto 0;
+}
+
+/* --- Grid de Cards (Flexbox) --- */
+.cs-grid-cursos {
+    display: flex;
+    justify-content: center; /* Centraliza os cards se não houver 3 */
+    flex-wrap: wrap;        /* Quebra de linha */
+    gap: 30px;               /* Espaço entre cards */
+}
+
+/* --- Estilo do Card --- */
+.cs-card {
+    background-color: white;
+    width: 360px; /* Largura fixa para manter proporção */
+    min-height: 520px; /* Altura mínima para alinhamento */
+    border-radius: 15px;
+    padding: 40px;
+    display: flex;
+    flex-direction: column; /* Conteúdo empilhado verticalmente */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    transition: all 0.3s ease; /* Transição para hover */
+    border: 1px solid transparent; /* Para hover */
+    cursor: pointer;
+}
+
+/* Hover no Card */
+.cs-card:hover {
+    transform: translateY(-8px); /* Sobe levemente */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Sombra mais forte */
+    border-color: rgba(248, 179, 50, 0.2); /* Borda amarela sutil */
+}
+
+/* Título do Curso no Card */
+.cs-card-titulo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1A2876; /* Azul escuro padrão */
+    margin-bottom: 25px;
+    line-height: 1.3;
+}
+
+/* Bloco de Info Rápida (Carga Horária, Duração, etc) */
+.cs-info-rapida {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0,0,0,0.06); /* Linha divisória fina */
+}
+
+/* Item de Info Rápida (Ícone + Texto) */
+.cs-info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #333; /* Cor neutra para texto info */
+    font-size: 18px;
+    font-weight: 500;
+}
+
+/* Ícones dentro do info rápida */
+.cs-info-item i {
+    font-size: 20px;
+    color: #F8B332; /* Amarelo padrão */
+    width: 25px;
+    text-align: center;
+}
+
+/* Texto em negrito (Carga Horária) no info rápida */
+.cs-texto-negrito {
+    font-weight: 700;
+    color: #333;
+}
+
+/* Perfil Resumo no Card */
+.cs-perfil-resumo {
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: auto; /* Empurra o botão para o final do card */
+    
+    /* Limita a 5 linhas de texto e corta com reticências (...) */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* --- Botão "Ver Detalhes" (Design do Site) --- */
+.cs-btn-detalhes {
+    width: 100%;
+    padding: 16px;
+    margin-top: 30px;
+    background-color: transparent;
+    border: 2px solid #CED4F4; /* Azul claro divisória */
+    border-radius: 10px;
+    color: #1A2876; /* Azul escuro padrão */
+    font-family: "Inter", sans-serif; /* Fonte secundária */
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    text-transform: uppercase; /* Letras maiúsculas */
+}
+
+/* Hover do Botão Detalhes */
+.cs-btn-detalhes:hover {
+    background-color: #1A2876; /* Azul escuro padrão */
+    color: white;
+    border-color: #1A2876;
+}
+
+/* =========================================
+   ESTILOS EXCLUSIVOS: SEÇÃO NOSSOS PARCEIROS
+   (Prefixados com 'np-' para isolamento)
+   ========================================= */
+.np-secao {
+    background-color: #E0F5FA; /* Azul muito claro (fundo padrão do site) */
+    padding: 100px 0;          /* Espaçamento generoso */
+    font-family: "Montserrat", sans-serif; /* Fonte principal */
+}
+
+.np-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Cabeçalho da Seção */
+.np-header {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.np-titulo {
+    color: #1A2876;   /* Azul escuro padrão */
+    font-size: 50px;  /* Tamanho grande */
+    font-weight: 700; /* Bold */
+}
+
+/* Grade de Logotipos (Flexbox) */
+.np-grade-logos {
+    display: flex;
+    justify-content: center; /* Centraliza os cartões de logo */
+    flex-wrap: wrap;        /* Quebra de linha se necessário */
+    gap: 40px;               /* Espaço entre os cartões */
+}
+
+/* Cartão que segura o logotipo */
+.np-logo-card {
+    background-color: white;
+    width: 320px;            /* Largura fixa do cartão */
+    height: 180px;           /* Altura fixa do cartão */
+    border-radius: 15px;
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center;     /* Centraliza a imagem verticalmente */
+    padding: 30px;           /* Padding interno */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08); /* Sombra suave padrão */
+}
+
+/* Imagem do Logotipo */
+.np-logo-img {
+    max-width: 50%;          /* Não deixa a imagem passar da largura do cartão */
+    object-fit: contain;      /* Mantém a proporção da imagem sem cortar */
+}
+
+
+
+/* =========================================
+   ESTILOS EXCLUSIVOS: RODAPÉ FINAL
+   (Prefixados com 'ro-' para isolamento)
+   ========================================= */
+.ro-rodape {
+    background-color: #1A2876; /* Azul escuro padrão */
+    color: white;             /* Texto branco por padrão */
+    padding: 80px 0 60px;     /* Espaçamento generoso */
+    font-family: "Montserrat", sans-serif; /* Fonte principal */
+}
+
+.ro-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* Grade do Rodapé (Flexbox) */
+.ro-grid {
+    display: flex;
+    justify-content: space-between; /* Espaço igual entre as colunas */
+    flex-wrap: wrap;                /* Quebra de linha se necessário */
+    gap: 40px;                       /* Espaço entre as colunas */
+}
+
+/* Estilos de Coluna Base */
+.ro-coluna {
+    flex: 1;              /* Colunas tentam ocupar o mesmo espaço */
+    min-width: 250px;     /* Largura mínima para colunas */
+}
+
+/* Títulos das Colunas */
+.ro-titulo-coluna {
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 25px;
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Sublinhado decorativo amarelo nos títulos das colunas */
+.ro-titulo-coluna::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #F8B332; /* Amarelo padrão */
+    border-radius: 2px;
+    margin-top: 8px;
+}
+
+/* Texto Geral do Rodapé */
+.ro-texto-sobre, .ro-texto-info {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Estilo para links do rodapé */
+.ro-link {
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    text-decoration: none; /* Remove sublinhado padrão */
+    transition: all 0.2s ease;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* Hover nos links */
+.ro-link:hover {
+    color: #F8B332; /* Amarelo padrão no hover */
+    text-decoration: underline; /* Sublinhado no hover */
+}
+
+/* --- Ajustes Específicos de Coluna --- */
+
+/* Coluna Sobre (Mais larga) */
+.ro-coluna-sobre {
+    flex: 2; /* Ocupa o dobro do espaço das outras */
+    max-width: 400px;
+}
+
+.ro-logo-instituto {
+    width: 80px;  /* Tamanho da logo no rodapé */
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.ro-titulo-instituto {
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 15px;
+    line-height: 1.3;
+}
+
+/* Destaque amarelo dentro do texto sobre */
+.ro-destaque {
+    color: #F8B332; /* Amarelo padrão */
+    font-weight: 700;
+}
+
+/* Coluna Links */
+.ro-lista-links {
+    list-style: none; /* Remove marcadores de lista */
+    padding: 0;
+}
+
+.ro-lista-links li {
+    margin-bottom: 12px; /* Espaço entre links */
+}
+
+/* Coluna Contato (Texto Alinhado à Direita) */
+.ro-coluna-contato {
+    text-align: right;
+    justify-content: flex-end; /* Alinha o conteúdo à direita se for flex */
+}   
+
+/* =========================================================
+   RESPONSIVIDADE — adicionada sem alterar o layout desktop
+   ========================================================= */
+@media (max-width: 1200px) {
+  .paii { padding: 5rem 4rem; gap: 3rem; }
+  .container-localizacao { padding: 0 4rem; }
+  .cs-container, .np-container, .ro-container { padding-left: 2rem; padding-right: 2rem; }
+  .cs-card { width: 34rem; }
+}
+
+@media (max-width: 992px) {
+  .conteudo { gap: 4rem; padding: 0 3rem; }
+  .fotodep img { width: 28rem; }
+  .textos { max-width: 50rem; }
+  .quadrados { margin-bottom: 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  header { flex-wrap: wrap; padding: 1.5rem 2rem; gap: 1.5rem; }
+  .logoo { margin-left: 0; width: 11rem; }
+  header ul { display: flex; flex-wrap: wrap; justify-content: center; gap: .4rem; padding: 0; }
+  ul li { font-size: 1.5rem; margin: .3rem .5rem; }
+  .botao { margin-right: 0; padding: 1.2rem; }
+
+  .espacofrase { height: auto; min-height: 40rem; padding: 5rem 2rem; }
+  .fraseefeito { font-size: clamp(3rem, 7vw, 4.8rem); }
+  .botoes { display: flex; flex-direction: column; gap: 1.2rem; width: min(100%, 34rem); }
+  .botoes br { display: none; }
+  .botao1, .botao2 { margin-right: 0; width: 100%; }
+
+  .conheca { height: auto; min-height: 25rem; padding: 5rem 2rem; }
+  .fraseefeito1 { font-size: clamp(3rem, 7vw, 4rem); }
+  .frasefrei { font-size: 2.2rem; line-height: 1.4; }
+
+  .paii { flex-direction: column; padding: 5rem 2rem; gap: 4rem; }
+  .fraseleft { width: 100%; }
+  .fraseleft h1 { font-size: 3.8rem; }
+  .fraseleft p { font-size: 1.9rem; }
+  .freiright { width: 100%; max-width: 46rem; }
+
+  .espacoo { height: auto; min-height: 18rem; padding: 4rem 2rem; }
+  .Fraseestru { font-size: 3.8rem; }
+  .frasesalas, .frasedep { font-size: 2rem; text-align: center; }
+  .quadrados { flex-direction: column; align-items: center; gap: 2rem; padding: 0 2rem; }
+  .boxleft, .boxright, .boxbaixa { width: 100%; max-width: 57rem; height: auto; min-height: 15rem; margin-left: 0; padding: 2rem; }
+  .topo { gap: 2rem; }
+  .topo h1 { font-size: 2rem; }
+  .boxleft p, .boxright p, .boxbaixa p { font-size: 1.8rem; }
+  .Modric { width: 100%; padding: 0 2rem; }
+  .wfrei { width: 100%; max-width: 38rem; height: auto; }
+
+  .banner { height: auto; }
+  .conteudo { flex-direction: column; padding: 4rem 2rem; gap: 2rem; }
+  .fotodep img { width: 24rem; margin: 0 auto; }
+  .conteudo > div:first-child img { max-width: 100%; height: auto; }
+  .textos { margin-top: 2rem; }
+  .textos h3 { font-size: 1.8rem; line-height: 1.5; }
+  .textos p { font-size: 1.6rem; }
+
+  .container-localizacao { flex-direction: column; padding: 0 2rem; gap: 2rem; }
+  .mapa-feira, .card-infos { width: 100%; }
+  .mapa-feira { min-height: 30rem; }
+  .mapa-feira img { height: auto; min-height: 30rem; }
+  .card-infos { padding: 3rem 2.5rem; }
+
+  .container-cronograma { padding: 0 2rem; }
+  .titulo-cronograma { font-size: 3.8rem; }
+  .subtitulo-cronograma { font-size: 2.1rem; }
+  .atividade-item { align-items: flex-start; gap: 1.5rem; }
+  .marcador-timeline { width: 5rem; height: 5rem; margin-right: 0; }
+  .card-atividade { padding: 2rem; flex-direction: column; align-items: flex-start; gap: .8rem; }
+  .card-atividade h3 { margin-right: 0; font-size: 2.3rem; }
+  .card-atividade p { font-size: 1.8rem; }
+
+  .cs-secao, .np-secao { padding: 6rem 0; }
+  .cs-titulo-principal, .np-titulo { font-size: 4rem; }
+  .cs-subtitulo-principal { font-size: 2.2rem; }
+  .cs-subtitulo-categoria { font-size: 3rem; }
+  .cs-card { width: 100%; max-width: 36rem; min-height: auto; }
+  .np-logo-card { width: 100%; max-width: 32rem; }
+  .ro-grid { flex-direction: column; }
+  .ro-coluna { width: 100%; min-width: 0; }
+}
+
+@media (max-width: 480px) {
+  html { font-size: 9px; }
+  header { padding: 1.5rem; }
+  .logoo { width: 10rem; }
+  header ul { width: 100%; }
+  ul li { font-size: 1.35rem; }
+  .botao { width: 100%; }
+  .fraseefeito { font-size: 3rem; }
+  .fraseefeito1 { font-size: 3rem; }
+  .frasefrei { font-size: 1.9rem; }
+  .fraseleft h1 { font-size: 3.3rem; }
+  .fraseleft p { font-size: 1.7rem; }
+  .freiright { padding: 1.8rem; }
+  .fotoo { height: 30rem; }
+  .Fraseestru { font-size: 3.2rem; }
+  .boxleft, .boxright, .boxbaixa { padding: 1.8rem; }
+  .topo { gap: 1.5rem; }
+  .topo img { width: 3rem; margin-left: 0; }
+  .topo h1 { font-size: 1.8rem; }
+  .boxleft p, .boxright p, .boxbaixa p { font-size: 1.6rem; }
+  .textos h3 { font-size: 1.7rem; }
+  .card-infos h1 { font-size: 2.7rem; }
+  .card-infos h3.subtitulo-card { font-size: 1.7rem; }
+  .bloco-info h4 { font-size: 1.9rem; }
+  .bloco-info p { font-size: 1.6rem; }
+  .titulo-cronograma { font-size: 3.2rem; }
+  .subtitulo-cronograma { font-size: 1.8rem; }
+  .atividade-item { gap: 1rem; }
+  .marcador-timeline { width: 4.2rem; height: 4.2rem; }
+  .icone-atividade { font-size: 2rem; }
+  .card-atividade { padding: 1.7rem; }
+  .card-atividade h3 { font-size: 2rem; }
+  .card-atividade p { font-size: 1.6rem; }
+  .cs-titulo-principal, .np-titulo { font-size: 3.3rem; }
+  .cs-subtitulo-categoria { font-size: 2.6rem; }
+  .cs-card { padding: 2.5rem; }
+  .cs-card-titulo { font-size: 2.2rem; }
+  .cs-info-item { font-size: 1.6rem; }
+  .np-logo-card { height: 16rem; }
+}
+
+
+/* Menu mobile */
+.menu-mobile {
+    display: none;
+    border: none;
+    background: transparent;
+    color: #101f74;
+    font-size: 2.6rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header { position: relative; }
+    .menu-mobile { display: block; }
+    .menu-principal {
+        width: 100%;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-principal.menu-aberto { display: flex; }
+}

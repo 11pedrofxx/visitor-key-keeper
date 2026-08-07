@@ -10,33 +10,109 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/route'
+import { Route as AdminSetupRouteImport } from './routes/admin-setup'
+import { Route as AuthRouteImport } from './routes/auth'
+import { Route as InscreverRouteImport } from './routes/inscrever'
+import { Route as AuthenticatedPainelRouteImport } from './routes/_authenticated/painel'
+import { Route as InscricaoTokenRouteImport } from './routes/inscricao.$token'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AuthenticatedRouteRoute = AuthenticatedRouteRouteImport.update({
+  id: '/_authenticated',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AdminSetupRoute = AdminSetupRouteImport.update({
+  id: '/admin-setup',
+  path: '/admin-setup',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthRoute = AuthRouteImport.update({
+  id: '/auth',
+  path: '/auth',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const InscreverRoute = InscreverRouteImport.update({
+  id: '/inscrever',
+  path: '/inscrever',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedPainelRoute = AuthenticatedPainelRouteImport.update({
+  id: '/painel',
+  path: '/painel',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const InscricaoTokenRoute = InscricaoTokenRouteImport.update({
+  id: '/inscricao/$token',
+  path: '/inscricao/$token',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/admin-setup': typeof AdminSetupRoute
+  '/auth': typeof AuthRoute
+  '/inscrever': typeof InscreverRoute
+  '/painel': typeof AuthenticatedPainelRoute
+  '/inscricao/$token': typeof InscricaoTokenRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/admin-setup': typeof AdminSetupRoute
+  '/auth': typeof AuthRoute
+  '/inscrever': typeof InscreverRoute
+  '/painel': typeof AuthenticatedPainelRoute
+  '/inscricao/$token': typeof InscricaoTokenRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/_authenticated': typeof AuthenticatedRouteRouteWithChildren
+  '/admin-setup': typeof AdminSetupRoute
+  '/auth': typeof AuthRoute
+  '/inscrever': typeof InscreverRoute
+  '/_authenticated/painel': typeof AuthenticatedPainelRoute
+  '/inscricao/$token': typeof InscricaoTokenRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths:
+    | '/'
+    | '/admin-setup'
+    | '/auth'
+    | '/inscrever'
+    | '/painel'
+    | '/inscricao/$token'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to:
+    | '/'
+    | '/admin-setup'
+    | '/auth'
+    | '/inscrever'
+    | '/painel'
+    | '/inscricao/$token'
+  id:
+    | '__root__'
+    | '/'
+    | '/_authenticated'
+    | '/admin-setup'
+    | '/auth'
+    | '/inscrever'
+    | '/_authenticated/painel'
+    | '/inscricao/$token'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AuthenticatedRouteRoute: typeof AuthenticatedRouteRouteWithChildren
+  AdminSetupRoute: typeof AdminSetupRoute
+  AuthRoute: typeof AuthRoute
+  InscreverRoute: typeof InscreverRoute
+  InscricaoTokenRoute: typeof InscricaoTokenRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,22 +124,70 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/_authenticated': {
+      id: '/_authenticated'
+      path: ''
+      fullPath: '/'
+      preLoaderRoute: typeof AuthenticatedRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/admin-setup': {
+      id: '/admin-setup'
+      path: '/admin-setup'
+      fullPath: '/admin-setup'
+      preLoaderRoute: typeof AdminSetupRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/auth': {
+      id: '/auth'
+      path: '/auth'
+      fullPath: '/auth'
+      preLoaderRoute: typeof AuthRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/inscrever': {
+      id: '/inscrever'
+      path: '/inscrever'
+      fullPath: '/inscrever'
+      preLoaderRoute: typeof InscreverRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/painel': {
+      id: '/_authenticated/painel'
+      path: '/painel'
+      fullPath: '/painel'
+      preLoaderRoute: typeof AuthenticatedPainelRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/inscricao/$token': {
+      id: '/inscricao/$token'
+      path: '/inscricao/$token'
+      fullPath: '/inscricao/$token'
+      preLoaderRoute: typeof InscricaoTokenRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
+interface AuthenticatedRouteRouteChildren {
+  AuthenticatedPainelRoute: typeof AuthenticatedPainelRoute
+}
+
+const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedPainelRoute: AuthenticatedPainelRoute,
+}
+
+const AuthenticatedRouteRouteWithChildren =
+  AuthenticatedRouteRoute._addFileChildren(AuthenticatedRouteRouteChildren)
+
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AuthenticatedRouteRoute: AuthenticatedRouteRouteWithChildren,
+  AdminSetupRoute: AdminSetupRoute,
+  AuthRoute: AuthRoute,
+  InscreverRoute: InscreverRoute,
+  InscricaoTokenRoute: InscricaoTokenRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
-
-import type { getRouter } from './router.tsx'
-import type { startInstance } from './start.ts'
-declare module '@tanstack/react-start' {
-  interface Register {
-    ssr: true
-    router: Awaited<ReturnType<typeof getRouter>>
-    config: Awaited<ReturnType<typeof startInstance.getOptions>>
-  }
-}
