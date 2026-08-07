@@ -60,6 +60,15 @@ function Painel() {
   const [perfil, setPerfil] = useState<{ nome: string; email: string } | null>(null);
   const [processando, setProcessando] = useState(false);
   const [qrVisitante, setQrVisitante] = useState<AdminParticipant | null>(null);
+  const [confirmacao, setConfirmacao] = useState<{ nome: string; sala: string; andar: string; hora: string } | null>(
+    null,
+  );
+
+  useEffect(() => {
+    if (!confirmacao) return;
+    const t = setTimeout(() => setConfirmacao(null), 10_000);
+    return () => clearTimeout(t);
+  }, [confirmacao]);
 
   useEffect(() => {
     const t = setTimeout(() => setBuscaAtiva(busca.trim()), 350);
