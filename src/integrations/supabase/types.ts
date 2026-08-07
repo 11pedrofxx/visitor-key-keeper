@@ -14,16 +14,186 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      admin_profiles: {
+        Row: {
+          created_at: string
+          email: string
+          id: string
+          nome: string
+        }
+        Insert: {
+          created_at?: string
+          email: string
+          id: string
+          nome: string
+        }
+        Update: {
+          created_at?: string
+          email?: string
+          id?: string
+          nome?: string
+        }
+        Relationships: []
+      }
+      participants: {
+        Row: {
+          aluno_frei: string | null
+          checked_in: boolean
+          checked_in_at: string | null
+          checked_in_by: string | null
+          como_soube: string | null
+          created_at: string
+          curso_interesse: string | null
+          email: string
+          horario_previsto: string | null
+          id: string
+          nome: string
+          qr_token: string
+          telefone: string
+        }
+        Insert: {
+          aluno_frei?: string | null
+          checked_in?: boolean
+          checked_in_at?: string | null
+          checked_in_by?: string | null
+          como_soube?: string | null
+          created_at?: string
+          curso_interesse?: string | null
+          email: string
+          horario_previsto?: string | null
+          id?: string
+          nome: string
+          qr_token: string
+          telefone: string
+        }
+        Update: {
+          aluno_frei?: string | null
+          checked_in?: boolean
+          checked_in_at?: string | null
+          checked_in_by?: string | null
+          como_soube?: string | null
+          created_at?: string
+          curso_interesse?: string | null
+          email?: string
+          horario_previsto?: string | null
+          id?: string
+          nome?: string
+          qr_token?: string
+          telefone?: string
+        }
+        Relationships: []
+      }
+      room_entries: {
+        Row: {
+          created_at: string
+          entered_at: string
+          entered_by: string | null
+          id: string
+          participant_id: string
+          room_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          entered_at?: string
+          entered_by?: string | null
+          id?: string
+          participant_id: string
+          room_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          entered_at?: string
+          entered_by?: string | null
+          id?: string
+          participant_id?: string
+          room_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "room_entries_participant_id_fkey"
+            columns: ["participant_id"]
+            isOneToOne: false
+            referencedRelation: "participants"
+            referencedColumns: ["id"]
+          },
+          {
+            foreignKeyName: "room_entries_room_id_fkey"
+            columns: ["room_id"]
+            isOneToOne: false
+            referencedRelation: "rooms"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      rooms: {
+        Row: {
+          andar: string
+          code: string
+          created_at: string
+          id: string
+          nome: string
+          ordem: number
+          updated_at: string
+        }
+        Insert: {
+          andar: string
+          code: string
+          created_at?: string
+          id?: string
+          nome: string
+          ordem?: number
+          updated_at?: string
+        }
+        Update: {
+          andar?: string
+          code?: string
+          created_at?: string
+          id?: string
+          nome?: string
+          ordem?: number
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      user_roles: {
+        Row: {
+          created_at: string
+          id: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          role: Database["public"]["Enums"]["app_role"]
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          role?: Database["public"]["Enums"]["app_role"]
+          user_id?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      has_role: {
+        Args: {
+          _role: Database["public"]["Enums"]["app_role"]
+          _user_id: string
+        }
+        Returns: boolean
+      }
     }
     Enums: {
-      [_ in never]: never
+      app_role: "admin"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -150,6 +320,8 @@ export type CompositeTypes<
 
 export const Constants = {
   public: {
-    Enums: {},
+    Enums: {
+      app_role: ["admin"],
+    },
   },
 } as const
