@@ -125,17 +125,26 @@ function Painel() {
       try {
         const r = await registrarSala({ data: { ...args, roomId: salaSelecionada } });
         if (!r.ok) {
+          setConfirmacao(null);
           setMensagem({ tipo: "erro", texto: r.error });
         } else if (r.already) {
+          setConfirmacao(null);
           setMensagem({
             tipo: "aviso",
             texto: `${r.participant.nome} já havia entrado na ${r.room.nome} em ${formatarData(r.enteredAt)}.`,
           });
         } else {
-          setMensagem({ tipo: "ok", texto: `Entrada registrada: ${r.participant.nome} → ${r.room.nome}.` });
+          setMensagem(null);
+          setConfirmacao({
+            nome: r.participant.nome,
+            sala: r.room.nome,
+            andar: r.room.andar,
+            hora: formatarData(r.enteredAt ?? new Date().toISOString()),
+          });
         }
         await invalidar();
       } catch {
+        setConfirmacao(null);
         setMensagem({ tipo: "erro", texto: "Falha ao registrar a entrada na sala." });
       } finally {
         setProcessando(false);
