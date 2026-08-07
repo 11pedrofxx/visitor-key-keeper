@@ -4,6 +4,7 @@ import { useServerFn } from "@tanstack/react-start";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { LeitorQrCode } from "@/components/LeitorQrCode";
+import { QrCodeVisitante } from "@/components/QrCodeVisitante";
 import {
   checkInParticipant,
   getAdminProfile,
