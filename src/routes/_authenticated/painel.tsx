@@ -325,10 +325,13 @@ function Painel() {
       </section>
 
       <section className="fx-bloco">
+        <div className="fx-bloco-topo">
+          <h2>Buscar inscrição / Recuperar QR Code</h2>
+        </div>
         <div className="fx-filtros">
           <input
             type="search"
-            placeholder="Buscar por nome, e-mail, telefone ou código"
+            placeholder="Buscar por nome, e-mail, telefone, código ou ID da inscrição"
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
             maxLength={120}
