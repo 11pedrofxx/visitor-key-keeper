@@ -59,6 +59,7 @@ function Painel() {
   const [mensagem, setMensagem] = useState<{ tipo: "ok" | "aviso" | "erro"; texto: string } | null>(null);
   const [perfil, setPerfil] = useState<{ nome: string; email: string } | null>(null);
   const [processando, setProcessando] = useState(false);
+  const [qrVisitante, setQrVisitante] = useState<AdminParticipant | null>(null);
 
   useEffect(() => {
     const t = setTimeout(() => setBuscaAtiva(busca.trim()), 350);
