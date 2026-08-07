@@ -560,14 +560,17 @@ font-family: "Montserrat", sans-serif;
     gap: 5rem;
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 4rem 0 8rem;
-    flex-wrap: wrap;
+    padding: 0 4rem 0 7rem;
 
+}
+
+.fotodep{
+    flex: 0 0 auto;
 }
 
 .fotodep img{
 
-    width: 36rem;
+    width: 34rem;
     max-width: 100%;
     height: auto;
     display: block;
@@ -577,6 +580,8 @@ font-family: "Montserrat", sans-serif;
 .textos{
 
     display: flex;
+    flex: 1 1 0;
+    min-width: 0;
     flex-direction: column;
     text-align: center;
     justify-content: center;
