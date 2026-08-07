@@ -446,6 +446,14 @@ function Painel() {
                             </button>
                           </>
                         ) : null}
+                        <br />
+                        <button
+                          type="button"
+                          className="fx-botao fx-botao-mini fx-botao-amarelo"
+                          onClick={() => setQrVisitante(p)}
+                        >
+                          Ver QR Code
+                        </button>
                       </td>
                     </tr>
                   );
@@ -455,6 +463,8 @@ function Painel() {
           </div>
         )}
       </section>
+
+      {qrVisitante ? <QrCodeVisitante participante={qrVisitante} onFechar={() => setQrVisitante(null)} /> : null}
     </div>
   );
 }
