@@ -60,6 +60,15 @@ function Painel() {
   const [perfil, setPerfil] = useState<{ nome: string; email: string } | null>(null);
   const [processando, setProcessando] = useState(false);
   const [qrVisitante, setQrVisitante] = useState<AdminParticipant | null>(null);
+  const [confirmacao, setConfirmacao] = useState<{ nome: string; sala: string; andar: string; hora: string } | null>(
+    null,
+  );
+
+  useEffect(() => {
+    if (!confirmacao) return;
+    const t = setTimeout(() => setConfirmacao(null), 10_000);
+    return () => clearTimeout(t);
+  }, [confirmacao]);
 
   useEffect(() => {
     const t = setTimeout(() => setBuscaAtiva(busca.trim()), 350);
@@ -116,17 +125,26 @@ function Painel() {
       try {
         const r = await registrarSala({ data: { ...args, roomId: salaSelecionada } });
         if (!r.ok) {
+          setConfirmacao(null);
           setMensagem({ tipo: "erro", texto: r.error });
         } else if (r.already) {
+          setConfirmacao(null);
           setMensagem({
             tipo: "aviso",
             texto: `${r.participant.nome} já havia entrado na ${r.room.nome} em ${formatarData(r.enteredAt)}.`,
           });
         } else {
-          setMensagem({ tipo: "ok", texto: `Entrada registrada: ${r.participant.nome} → ${r.room.nome}.` });
+          setMensagem(null);
+          setConfirmacao({
+            nome: r.participant.nome,
+            sala: r.room.nome,
+            andar: r.room.andar,
+            hora: formatarData(r.enteredAt ?? new Date().toISOString()),
+          });
         }
         await invalidar();
       } catch {
+        setConfirmacao(null);
         setMensagem({ tipo: "erro", texto: "Falha ao registrar a entrada na sala." });
       } finally {
         setProcessando(false);
@@ -270,6 +288,25 @@ function Painel() {
             {scanner ? "Fechar câmera" : "Abrir câmera"}
           </button>
         </div>
+
+        {confirmacao ? (
+          <div className="fx-scan-ok" role="status" aria-live="polite">
+            <span className="fx-scan-ok-icone" aria-hidden="true">
+              ✓
+            </span>
+            <div className="fx-scan-ok-corpo">
+              <p className="fx-scan-ok-titulo">Entrada registrada com sucesso!</p>
+              <p className="fx-scan-ok-linha">
+                Visitante: <strong>{confirmacao.nome}</strong>
+              </p>
+              <p className="fx-scan-ok-linha">
+                Sala: <strong>{confirmacao.sala}</strong> · {confirmacao.andar}
+              </p>
+              <p className="fx-scan-ok-linha">Horário: {confirmacao.hora}</p>
+            </div>
+          </div>
+        ) : null}
+
         {!salaSelecionada ? (
           <p className="fx-vazio">Selecione primeiro a sala em que o leitor está sendo usado.</p>
         ) : scanner ? (

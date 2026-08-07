@@ -562,3 +562,67 @@ body:has(.fx-painel) {
   background: #dcfce7;
   color: #14653b;
 }
+
+/* Confirmação de leitura do QR Code */
+.fx-scan-ok {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: #dcfce7;
+  border: 2px solid #16a34a;
+  border-radius: 14px;
+  padding: 1.2rem 1.4rem;
+  margin-bottom: 1.4rem;
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.18);
+  max-width: 100%;
+  box-sizing: border-box;
+  animation: fx-scan-pop 0.25s ease;
+}
+@keyframes fx-scan-pop {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fx-scan-ok-icone {
+  flex: 0 0 auto;
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background: #16a34a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1;
+}
+.fx-scan-ok-corpo {
+  min-width: 0;
+}
+.fx-scan-ok-titulo {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #14653b;
+  margin: 0 0 0.4rem;
+}
+.fx-scan-ok-linha {
+  font-size: 1.3rem;
+  color: #166534;
+  margin: 0.1rem 0;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 640px) {
+  .fx-scan-ok {
+    gap: 0.9rem;
+    padding: 1rem;
+  }
+  .fx-scan-ok-titulo {
+    font-size: 1.5rem;
+  }
+}
