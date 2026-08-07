@@ -288,6 +288,25 @@ function Painel() {
             {scanner ? "Fechar câmera" : "Abrir câmera"}
           </button>
         </div>
+
+        {confirmacao ? (
+          <div className="fx-scan-ok" role="status" aria-live="polite">
+            <span className="fx-scan-ok-icone" aria-hidden="true">
+              ✓
+            </span>
+            <div className="fx-scan-ok-corpo">
+              <p className="fx-scan-ok-titulo">Entrada registrada com sucesso!</p>
+              <p className="fx-scan-ok-linha">
+                Visitante: <strong>{confirmacao.nome}</strong>
+              </p>
+              <p className="fx-scan-ok-linha">
+                Sala: <strong>{confirmacao.sala}</strong> · {confirmacao.andar}
+              </p>
+              <p className="fx-scan-ok-linha">Horário: {confirmacao.hora}</p>
+            </div>
+          </div>
+        ) : null}
+
         {!salaSelecionada ? (
           <p className="fx-vazio">Selecione primeiro a sala em que o leitor está sendo usado.</p>
         ) : scanner ? (
