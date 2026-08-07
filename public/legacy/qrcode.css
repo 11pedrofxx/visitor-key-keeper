@@ -1,0 +1,82 @@
+body{
+background:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+height:800px;
+}
+
+.qrcode{
+width:850px;
+padding:40px;
+background:#fff;
+border:1px solid #888;
+text-align:center;
+}
+
+
+.qrcode h1{
+font-size:36px;
+margin-bottom:8px;
+}
+
+.qrcode p{
+color: #000;
+margin-bottom:30px;
+}
+
+.qr{
+width:400px;
+height:220px;
+position: relative;
+left: 225px;
+border:1px solid #000000;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius: 4px;
+}
+
+.qr img{
+width:120px;
+height:120px;
+}
+
+button{
+background:#F8B332;
+color:#1A2876;
+border:none;
+padding:14px 45px;
+border-radius:30px;
+cursor:pointer;
+font-weight:bold;
+transition:.3s;
+position: relative;
+top: 20px;
+
+}
+
+button:hover{
+background:#e89d14;
+}
+
+.inter{
+font-family: "Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 750;
+font-style: normal;
+}
+
+.inter-b{
+font-family: "Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 350;
+font-style: normal;
+}
+
+.inter-button{
+font-family: "Inter", sans-serif;
+font-optical-sizing: auto;
+font-weight: 650;
+font-style: normal;
+}
