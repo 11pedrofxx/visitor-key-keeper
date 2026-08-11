@@ -220,7 +220,7 @@ function Home() {
 
         <div className="container-localizacao">
           <div className="mapa-feira">
-            <img src="/pictures/Captura_de_tela_2026-07-24_101710.png" alt="Mapa de localização do Instituto" />
+            <img src="/pictures/Captura_de_tela_2026-07-24_101710.png" alt="Mapa de localização do Instituto"/>
           </div>
 
           <div className="card-infos">
