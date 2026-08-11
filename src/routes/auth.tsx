@@ -123,7 +123,7 @@ function LoginAdmin() {
           />
         </div>
 
-        <div className="Sistema">
+        <div className="Sistema" style={{ marginLeft: "auto", marginRight: "auto" }}>
           <button
             type="submit"
             disabled={carregando}
@@ -139,11 +139,12 @@ function LoginAdmin() {
         </div>
       </form>
 
-      <Link to="/" style={{ width: "100%", textDecoration: "none" }}>
-        <div className="voltar">
+      <Link to="/" style={{ width: "100%", textDecoration: "none", display: "block" }}>
+        <div className="voltar" style={{ marginLeft: "auto", marginRight: "auto" }}>
           <h1>Voltar</h1>
         </div>
       </Link>
+
 
       {precisaSetup ? (
         <Link to="/admin-setup" className="fx-link-voltar">
