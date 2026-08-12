@@ -160,15 +160,19 @@ function Inscrever() {
 
             <div className="input-group">
               <label htmlFor="como-soube">Como ficou sabendo sobre a Feira?</label>
-              <input
-                type="text"
+              <select
                 id="como-soube"
                 name="como_soube"
-                placeholder="Familiar, amigo ou redes sociais"
                 value={valores.como_soube}
                 onChange={(e) => atualizar("como_soube", e.target.value)}
-                maxLength={200}
-              />
+              >
+                <option value="">Selecione uma opção</option>
+                {OPCOES_COMO_SOUBE.map((opcao) => (
+                  <option key={opcao} value={opcao}>
+                    {opcao}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div className="input-group">
@@ -186,28 +190,33 @@ function Inscrever() {
 
             <div className="input-group">
               <label htmlFor="curso">Você possui interesse em algum curso?</label>
-              <input
-                type="text"
+              <select
                 id="curso"
                 name="curso_interesse"
-                placeholder="Digite o curso"
                 value={valores.curso_interesse}
                 onChange={(e) => atualizar("curso_interesse", e.target.value)}
-                maxLength={150}
-              />
+              >
+                <option value="">Selecione um curso</option>
+                {OPCOES_CURSOS.map((opcao) => (
+                  <option key={opcao} value={opcao}>
+                    {opcao}
+                  </option>
+                ))}
+              </select>
             </div>
 
             <div className="input-group">
               <label htmlFor="aluno-frei">Você é ou já foi aluno do Frei?</label>
-              <input
-                type="text"
+              <select
                 id="aluno-frei"
                 name="aluno_frei"
-                placeholder="Digite sua resposta"
                 value={valores.aluno_frei}
                 onChange={(e) => atualizar("aluno_frei", e.target.value)}
-                maxLength={100}
-              />
+              >
+                <option value="">Selecione uma opção</option>
+                <option value="Sim">Sim</option>
+                <option value="Não">Não</option>
+              </select>
             </div>
 
             <button type="submit" className="botaao btn-enviar" disabled={enviando}>
