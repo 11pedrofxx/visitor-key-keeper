@@ -260,15 +260,8 @@ function Home() {
             </div>
           </div>
         </div>
-
-        <div className="acao-mapa">
-          <a href="https://maps.app.goo.gl/Duat3mPRvxsTMUhYA" target="_blank" rel="noopener noreferrer">
-            <button className="botao-veja-mais" type="button">
-              <i className="fas fa-map-marker-alt"></i> Ver localização no Google Maps
-            </button>
-          </a>
-        </div>
       </section>
+
 
 
       <section id="cronograma" className="secao-cronograma">
