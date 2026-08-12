@@ -37,6 +37,17 @@ const camposIniciais: RegistrationInput = {
   aluno_frei: "",
 };
 
+const OPCOES_COMO_SOUBE = ["Familiar", "Amigos", "Redes sociais"] as const;
+
+const OPCOES_CURSOS = [
+  "Curso Técnico em Administração",
+  "Curso Técnico em Comunicação Visual",
+  "Curso Técnico em Informática",
+  "Curso de Qualificação Profissional em Eletromecânica de Autos",
+  "Curso Livre de Inglês Básico ao Pré-Intermediário - English in Action (Diurno)",
+  "Curso Livre de Inglês Pré-Intermediário - English in Action (Noturno)",
+] as const;
+
 function Inscrever() {
   const navigate = useNavigate();
   const enviar = useServerFn(registerParticipant);
