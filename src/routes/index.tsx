@@ -219,9 +219,16 @@ function Home() {
         </div>
 
         <div className="container-localizacao">
-          <div className="mapa-feira">
+          <a
+            className="mapa-feira"
+            href="https://maps.app.goo.gl/Duat3mPRvxsTMUhYA"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Ver localização no Google Maps"
+          >
             <img src="/pictures/Captura_de_tela_2026-07-24_101710.png" alt="Mapa de localização do Instituto"/>
-          </div>
+          </a>
+
 
           <div className="card-infos">
             <h1>Feira de Profissões 2026</h1>
