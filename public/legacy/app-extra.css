@@ -638,13 +638,13 @@ a.mapa-feira:hover {
     box-shadow: 0 14px 30px rgba(0,0,0,0.22);
 }
 
-.acao-mapa {
+.secao-como-chegar .acao-mapa {
     display: flex;
     justify-content: center;
     padding: 4rem 2rem 0;
 }
 
-.acao-mapa .botao-veja-mais {
+.secao-como-chegar .acao-mapa .botao-veja-mais {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -656,8 +656,8 @@ a.mapa-feira:hover {
 }
 
 @media (max-width: 600px) {
-    .acao-mapa { padding: 3rem 2rem 0; }
-    .acao-mapa .botao-veja-mais {
+    .secao-como-chegar .acao-mapa { padding: 3rem 2rem 0; }
+    .secao-como-chegar .acao-mapa .botao-veja-mais {
         width: 100%;
         font-size: 1.7rem;
         padding: 1.4rem 2rem;
