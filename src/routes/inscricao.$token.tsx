@@ -93,7 +93,7 @@ function Confirmacao() {
         <p className="fx-sub">
           {primeiroNome}, sua inscrição na Feira de Profissões 2026 foi registrada.
           <br />
-          Apresente o QR Code abaixo no credenciamento, no dia 27 de setembro.
+          Apresente o QR Code abaixo no credenciamento, no dia 19 de setembro, das 10h às 16h.
         </p>
 
         {p.checked_in ? (

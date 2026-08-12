@@ -8,7 +8,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Feira de Profissões 2026: 27 de setembro, das 08h às 14h, no Instituto Social Nossa Senhora de Fátima. Evento gratuito — faça sua inscrição e receba seu QR Code.",
+          "Feira de Profissões 2026: 19 de setembro, das 10h às 16h, no Instituto Social Nossa Senhora de Fátima. Evento gratuito — faça sua inscrição e receba seu QR Code.",
       },
       { property: "og:title", content: "Feira de Profissões 2026 — Instituto Nossa Senhora de Fátima" },
       {
@@ -230,8 +230,8 @@ function Home() {
             <div className="bloco-info">
               <img src="/pictures/clock-regular.png" alt="Ícone Relógio" />
               <div className="texto-info">
-                <h4>27 de Setembro</h4>
-                <p>Sábado, das 08:00 às 14:00</p>
+                <h4>19 de Setembro</h4>
+                <p>Sábado, das 10:00 às 16:00</p>
               </div>
             </div>
 
@@ -260,20 +260,20 @@ function Home() {
           <header id="programacaoo" className="cabecalho-cronograma">
             <h2 className="titulo-cronograma">Como será o dia do evento</h2>
             <p className="subtitulo-cronograma">
-              Programação completa das 08h às 17h — participe de quantas atividades quiser.
+              Programação completa das 10h às 16h — participe de quantas atividades quiser.
             </p>
           </header>
 
           <div className="timeline-wrapper">
             <div className="lista-atividades">
               {[
-                { icon: "fas fa-clipboard-list", hora: "08:00", nome: "Credenciamento" },
-                { icon: "fas fa-flag", hora: "09:00", nome: "Abertura oficial" },
-                { icon: "fas fa-tools", hora: "10:00", nome: "Oficinas práticas" },
-                { icon: "fas fa-microscope", hora: "11:00", nome: "Visitação aos laboratórios" },
-                { icon: "fas fa-microphone", hora: "13:00", nome: "Palestras" },
+                { icon: "fas fa-clipboard-list", hora: "10:00", nome: "Credenciamento" },
+                { icon: "fas fa-flag", hora: "10:30", nome: "Abertura oficial" },
+                { icon: "fas fa-tools", hora: "11:00", nome: "Oficinas práticas" },
+                { icon: "fas fa-microscope", hora: "12:00", nome: "Visitação aos laboratórios" },
+                { icon: "fas fa-microphone", hora: "13:30", nome: "Palestras" },
                 { icon: "fas fa-handshake", hora: "15:00", nome: "Rodada com empresas" },
-                { icon: "fas fa-glass-cheers", hora: "17:00", nome: "Encerramento" },
+                { icon: "fas fa-glass-cheers", hora: "16:00", nome: "Encerramento" },
               ].map((item) => (
                 <article className="atividade-item" key={item.hora}>
                   <div className="marcador-timeline">
@@ -453,7 +453,7 @@ function Home() {
             <div className="ro-coluna ro-coluna-info">
               <h4 className="ro-titulo-coluna">Horários e Endereço</h4>
               <p className="ro-texto-info">
-                <strong>27 de Setembro das 9h às 14h</strong>
+                <strong>19 de Setembro das 10h às 16h</strong>
               </p>
               <p className="ro-texto-info">
                 Instituto Social Nossa Senhora de Fátima,
