@@ -219,15 +219,11 @@ function Home() {
         </div>
 
         <div className="container-localizacao">
-          <a
-            className="mapa-feira"
-            href="https://maps.app.goo.gl/Duat3mPRvxsTMUhYA"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Ver localização no Google Maps"
-          >
+          <div className="mapa-feira">
             <img src="/pictures/Captura_de_tela_2026-07-24_101710.png" alt="Mapa de localização do Instituto"/>
-          </a>
+          </div>
+
+
 
 
           <div className="card-infos">
