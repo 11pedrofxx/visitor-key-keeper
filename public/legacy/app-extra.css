@@ -626,3 +626,139 @@ body:has(.fx-painel) {
     font-size: 1.5rem;
   }
 }
+
+/* ===== Programação: cards de destaque ===== */
+.card-atividade.card-atividade-destaque {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #ffffff;
+    gap: 1rem;
+}
+
+.card-atividade.card-atividade-destaque h3 {
+    margin-right: 0;
+    font-size: 2.4rem;
+    line-height: 1.3;
+}
+
+.lista-detalhes-atividade {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.lista-detalhes-atividade li {
+    position: relative;
+    padding-left: 2rem;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: #3749AE;
+    line-height: 1.4;
+}
+
+.lista-detalhes-atividade li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.8rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-color: #F8B332;
+}
+
+/* ===== Programação oficial por andar ===== */
+.programacao-oficial {
+    margin-top: 10rem;
+    padding: 0 2rem;
+}
+
+.programacao-oficial .cabecalho-cronograma {
+    margin-bottom: 5rem;
+}
+
+.programacao-oficial .titulo-cronograma {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.programacao-oficial .subtitulo-cronograma {
+    font-size: 2.2rem;
+}
+
+.grade-andares {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.bloco-andar {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.bloco-andar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+    border-color: rgba(248, 179, 50, 0.2);
+}
+
+.titulo-andar {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: #1A2876;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 3px solid #F8B332;
+}
+
+.lista-salas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.item-sala {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.nome-sala {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1A2876;
+}
+
+.desc-sala {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #333;
+    line-height: 1.45;
+}
+
+@media (max-width: 768px) {
+    .card-atividade.card-atividade-destaque h3 { font-size: 2rem; }
+    .lista-detalhes-atividade li { font-size: 1.6rem; }
+    .programacao-oficial { margin-top: 6rem; padding: 0 1.5rem; }
+    .programacao-oficial .titulo-cronograma { font-size: 3rem; }
+    .programacao-oficial .subtitulo-cronograma { font-size: 1.8rem; }
+    .grade-andares { grid-template-columns: 1fr; gap: 2rem; }
+}
