@@ -1397,7 +1397,7 @@ font-family: "Montserrat", sans-serif;
 .lista-salas .item-sala:hover,
 .atividade-item:hover .lista-detalhes-atividade li {
     text-decoration: none !important;
-    font-size: inherit !important;
+    font-size: revert !important;
     transform: none !important;
     color: inherit;
     background: none;
