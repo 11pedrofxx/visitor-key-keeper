@@ -1394,11 +1394,15 @@ font-family: "Montserrat", sans-serif;
 }
 
 .lista-detalhes-atividade li:hover,
-.lista-salas .item-sala:hover {
-    text-decoration: none;
-    font-size: inherit;
-    transform: none;
+.lista-salas .item-sala:hover,
+.atividade-item:hover .lista-detalhes-atividade li {
+    text-decoration: none !important;
+    font-size: inherit !important;
+    transform: none !important;
+    color: inherit;
+    background: none;
 }
+
 
 .lista-detalhes-atividade li {
     position: relative;
