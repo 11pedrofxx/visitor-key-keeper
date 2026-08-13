@@ -264,36 +264,121 @@ function Home() {
         <div className="container-cronograma">
           <header id="programacaoo" className="cabecalho-cronograma">
             <h2 className="titulo-cronograma">Como será o dia do evento</h2>
-            <p className="subtitulo-cronograma">
-              Programação completa das 10h às 16h — participe de quantas atividades quiser.
-            </p>
+            <p className="subtitulo-cronograma">Confira alguma das atrações da feira de profissões 2026</p>
           </header>
 
           <div className="timeline-wrapper">
             <div className="lista-atividades">
               {[
-                { icon: "fas fa-clipboard-list", hora: "10:00", nome: "Credenciamento" },
-                { icon: "fas fa-flag", hora: "10:30", nome: "Abertura oficial" },
-                { icon: "fas fa-tools", hora: "11:00", nome: "Oficinas práticas" },
-                { icon: "fas fa-microscope", hora: "12:00", nome: "Visitação aos laboratórios" },
-                { icon: "fas fa-microphone", hora: "13:30", nome: "Palestras" },
-                { icon: "fas fa-handshake", hora: "15:00", nome: "Rodada com empresas" },
-                { icon: "fas fa-glass-cheers", hora: "16:00", nome: "Encerramento" },
+                { icon: "fas fa-book-open", nome: "Exposição e venda dos livros do Frei Xavier", itens: [] },
+                {
+                  icon: "fas fa-utensils",
+                  nome: "Alimentação",
+                  itens: ["Delícias da Padaria do Frei, Pastéis e Bebidas"],
+                },
+                {
+                  icon: "fas fa-tools",
+                  nome: "Oficinas práticas",
+                  itens: [
+                    "Oficina de Mecânica de Autos PÁTIO",
+                    "Oficina de Auto Elétrica de Autos",
+                    "Oficina de Automação Residencial e Robótica",
+                  ],
+                },
+                {
+                  icon: "fas fa-chalkboard-teacher",
+                  nome: "Mesa de cursos",
+                  itens: ["Informações sobre o Instituto e inscrições 2026"],
+                },
+                {
+                  icon: "fas fa-microphone",
+                  nome: "Palestras",
+                  itens: [
+                    "APS Soluções – Energia que nos move",
+                    "Conexão Bem Maior – Empresas Patrocinadoras e parceiras",
+                    "STB Intercâmbio",
+                    "R&M – Educação Financeira",
+                  ],
+                },
+                {
+                  icon: "fas fa-handshake",
+                  nome: "Conexão Bem Maior",
+                  itens: ["Empresas Patrocinadoras e parceiras"],
+                },
+                { icon: "fas fa-exchange-alt", nome: "SEBO e Troca de Livros", itens: [] },
               ].map((item) => (
-                <article className="atividade-item" key={item.hora}>
+                <article className="atividade-item" key={item.nome}>
                   <div className="marcador-timeline">
                     <i className={`${item.icon} icone-atividade`}></i>
                   </div>
-                  <div className="card-atividade">
-                    <h3>{item.hora}</h3>
-                    <p>{item.nome}</p>
+                  <div className="card-atividade card-atividade-destaque">
+                    <h3>{item.nome}</h3>
+                    {item.itens.length > 0 && (
+                      <ul className="lista-detalhes-atividade">
+                        {item.itens.map((sub) => (
+                          <li key={sub}>{sub}</li>
+                        ))}
+                      </ul>
+                    )}
                   </div>
                 </article>
               ))}
             </div>
           </div>
+
+          <div className="programacao-oficial">
+            <header className="cabecalho-cronograma">
+              <h2 className="titulo-cronograma">Programação 6ª Feira das Profissões</h2>
+              <p className="subtitulo-cronograma">Programação oficial organizada por andar</p>
+            </header>
+
+            <div className="grade-andares">
+              {[
+                {
+                  andar: "1º andar",
+                  salas: [
+                    { local: "Sala 17", desc: "UBS – Vacinação e Aferição de pressão e Glicemia" },
+                    { local: "Sala 18", desc: "Administração – Empreendedorismo e Logística" },
+                    { local: "Sala 19", desc: "Administração – RH e Contabilidade" },
+                    { local: "Sala 20", desc: "Inglês – Conheça as etapas dos cursos e venha conversar em Inglês" },
+                  ],
+                },
+                {
+                  andar: "2º andar",
+                  salas: [
+                    { local: "Sala 24", desc: "Comunicação Visual – Conheça o CorelDRAW – Photoshop – Fotografia" },
+                    { local: "Sala 25", desc: "Informática – Hardware – Redes e Cibersegurança" },
+                    { local: "Sala 26", desc: "Informática – Programação" },
+                    { local: "Sala 27", desc: "Elaboração de currículos – voluntários da empresa MAPFRE" },
+                  ],
+                },
+                {
+                  andar: "3º andar",
+                  salas: [
+                    { local: "Auditório", desc: "Simulação de Entrevista de Emprego – Voluntários da empresa MAPFRE" },
+                    { local: "CATE", desc: "Elaboração de Carteira de Trabalho digital e Vagas de emprego" },
+                    { local: "ADE SAMPA", desc: "Atendimento aos Pequenos e Micro empresários" },
+                    { local: "R&M", desc: "Educação Financeira" },
+                  ],
+                },
+              ].map((bloco) => (
+                <div className="bloco-andar" key={bloco.andar}>
+                  <h3 className="titulo-andar">{bloco.andar}</h3>
+                  <ul className="lista-salas">
+                    {bloco.salas.map((sala) => (
+                      <li className="item-sala" key={sala.local}>
+                        <span className="nome-sala">{sala.local}</span>
+                        <span className="desc-sala">{sala.desc}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
+
 
       <section id="cursos" className="cs-secao">
         <div className="cs-container">
