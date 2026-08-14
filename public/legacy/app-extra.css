@@ -627,3 +627,62 @@ body:has(.fx-painel) {
   }
 }
 
+
+/* ---- Modo quiosque (leitor dedicado de entrada) ---- */
+.fx-kiosk {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2rem;
+  padding: 2rem 1.2rem 3rem;
+  background: #0b2a4a;
+  color: #fff;
+}
+.fx-kiosk-cabecalho {
+  text-align: center;
+}
+.fx-kiosk-cabecalho h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.6rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.fx-kiosk-sala {
+  margin: 0.4rem 0 0;
+  font-size: clamp(1.8rem, 6vw, 3.4rem);
+  font-weight: 800;
+  color: #ffd23f;
+}
+.fx-kiosk-sala span {
+  font-size: 0.45em;
+  font-weight: 600;
+  color: #dce8f5;
+}
+.fx-kiosk-camera {
+  width: min(680px, 100%);
+  background: #06192d;
+  border: 3px solid #ffd23f;
+  border-radius: 18px;
+  padding: 0.8rem;
+}
+.fx-kiosk-camera .fx-scanner-video {
+  width: 100%;
+  border-radius: 12px;
+}
+.fx-kiosk-instrucao {
+  margin: 0;
+  font-size: clamp(1rem, 2.6vw, 1.5rem);
+  text-align: center;
+  color: #e6f0fa;
+}
+.fx-kiosk-feedback {
+  width: min(680px, 100%);
+  font-size: clamp(1rem, 2.4vw, 1.35rem);
+}
+@media (max-width: 640px) {
+  .fx-kiosk {
+    padding: 1.2rem 0.8rem 2rem;
+  }
+}
