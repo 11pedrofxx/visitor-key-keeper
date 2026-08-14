@@ -93,7 +93,7 @@ function Home() {
           </Link>
         </div>
       </div>
-
+  
       <div className="conheca">
         <h1 className="fraseefeito1">Conheça Nossa Instituição:</h1>
         <h2 className="frasefrei">
@@ -338,24 +338,24 @@ function Home() {
                   andar: "1º andar",
                   salas: [
                     { local: "Sala 17", desc: "UBS – Vacinação e Aferição de pressão e Glicemia" },
-                    { local: "Sala 18", desc: "Administração – Empreendedorismo e Logística" },
-                    { local: "Sala 19", desc: "Administração – RH e Contabilidade" },
-                    { local: "Sala 20", desc: "Inglês – Conheça as etapas dos cursos e venha conversar em Inglês" },
+                    { local: "Sala 18", desc: <strong>"Administração – Empreendedorismo e Logística"</strong> },
+                    { local: "Sala 19", desc: <strong>"Administração – RH e Contabilidade"</strong> },
+                    { local: "Sala 20", desc: <strong>"Inglês – Conheça as etapas dos cursos e venha conversar em Inglês"</strong> },
                   ],
                 },
                 {
                   andar: "2º andar",
                   salas: [
-                    { local: "Sala 24", desc: "Comunicação Visual – Conheça o CorelDRAW – Photoshop – Fotografia" },
-                    { local: "Sala 25", desc: "Informática – Hardware – Redes e Cibersegurança" },
-                    { local: "Sala 26", desc: "Informática – Programação" },
+                    { local: "Sala 24", desc: <strong>"Comunicação Visual – Conheça o CorelDRAW – Photoshop – Fotografia"</strong> },
+                    { local: "Sala 25", desc: <strong>"Informática – Hardware – Redes e Cibersegurança"</strong> },
+                    { local: "Sala 26", desc: <strong>"Informática – Programação"</strong> },
                     { local: "Sala 27", desc: "Elaboração de currículos – voluntários da empresa MAPFRE" },
                   ],
                 },
                 {
                   andar: "3º andar",
                   salas: [
-                    { local: "Auditório", desc: "Simulação de Entrevista de Emprego – Voluntários da empresa MAPFRE" },
+                    { local: "Auditório", desc: <strong>"Simulação de Entrevista de Emprego – Voluntários da empresa MAPFRE"</strong> },
                     { local: "CATE", desc: "Elaboração de Carteira de Trabalho digital e Vagas de emprego" },
                     { local: "ADE SAMPA", desc: "Atendimento aos Pequenos e Micro empresários" },
                     { local: "R&M", desc: "Educação Financeira" },
