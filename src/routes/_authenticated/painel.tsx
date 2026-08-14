@@ -206,6 +206,9 @@ function Painel() {
           <p>{perfil ? `Conectado como ${perfil.nome}` : "Feira de Profissões 2026"}</p>
         </div>
         <div className="fx-acoes">
+          <Link to="/config-leitor" className="fx-botao fx-botao-claro">
+            Configurar leitor
+          </Link>
           <Link to="/" className="fx-botao fx-botao-claro">
             Ver site
           </Link>

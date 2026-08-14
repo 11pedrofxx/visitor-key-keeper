@@ -14,6 +14,8 @@ import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/
 import { Route as AdminSetupRouteImport } from './routes/admin-setup'
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as InscreverRouteImport } from './routes/inscrever'
+import { Route as ScannerRouteImport } from './routes/scanner'
+import { Route as AuthenticatedConfigLeitorRouteImport } from './routes/_authenticated/config-leitor'
 import { Route as AuthenticatedPainelRouteImport } from './routes/_authenticated/painel'
 import { Route as InscricaoTokenRouteImport } from './routes/inscricao.$token'
 
@@ -41,6 +43,17 @@ const InscreverRoute = InscreverRouteImport.update({
   path: '/inscrever',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ScannerRoute = ScannerRouteImport.update({
+  id: '/scanner',
+  path: '/scanner',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AuthenticatedConfigLeitorRoute =
+  AuthenticatedConfigLeitorRouteImport.update({
+    id: '/config-leitor',
+    path: '/config-leitor',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedPainelRoute = AuthenticatedPainelRouteImport.update({
   id: '/painel',
   path: '/painel',
@@ -57,6 +70,8 @@ export interface FileRoutesByFullPath {
   '/admin-setup': typeof AdminSetupRoute
   '/auth': typeof AuthRoute
   '/inscrever': typeof InscreverRoute
+  '/scanner': typeof ScannerRoute
+  '/config-leitor': typeof AuthenticatedConfigLeitorRoute
   '/painel': typeof AuthenticatedPainelRoute
   '/inscricao/$token': typeof InscricaoTokenRoute
 }
@@ -65,6 +80,8 @@ export interface FileRoutesByTo {
   '/admin-setup': typeof AdminSetupRoute
   '/auth': typeof AuthRoute
   '/inscrever': typeof InscreverRoute
+  '/scanner': typeof ScannerRoute
+  '/config-leitor': typeof AuthenticatedConfigLeitorRoute
   '/painel': typeof AuthenticatedPainelRoute
   '/inscricao/$token': typeof InscricaoTokenRoute
 }
@@ -75,6 +92,8 @@ export interface FileRoutesById {
   '/admin-setup': typeof AdminSetupRoute
   '/auth': typeof AuthRoute
   '/inscrever': typeof InscreverRoute
+  '/scanner': typeof ScannerRoute
+  '/_authenticated/config-leitor': typeof AuthenticatedConfigLeitorRoute
   '/_authenticated/painel': typeof AuthenticatedPainelRoute
   '/inscricao/$token': typeof InscricaoTokenRoute
 }
@@ -85,6 +104,8 @@ export interface FileRouteTypes {
     | '/admin-setup'
     | '/auth'
     | '/inscrever'
+    | '/scanner'
+    | '/config-leitor'
     | '/painel'
     | '/inscricao/$token'
   fileRoutesByTo: FileRoutesByTo
@@ -93,6 +114,8 @@ export interface FileRouteTypes {
     | '/admin-setup'
     | '/auth'
     | '/inscrever'
+    | '/scanner'
+    | '/config-leitor'
     | '/painel'
     | '/inscricao/$token'
   id:
@@ -102,6 +125,8 @@ export interface FileRouteTypes {
     | '/admin-setup'
     | '/auth'
     | '/inscrever'
+    | '/scanner'
+    | '/_authenticated/config-leitor'
     | '/_authenticated/painel'
     | '/inscricao/$token'
   fileRoutesById: FileRoutesById
@@ -112,6 +137,7 @@ export interface RootRouteChildren {
   AdminSetupRoute: typeof AdminSetupRoute
   AuthRoute: typeof AuthRoute
   InscreverRoute: typeof InscreverRoute
+  ScannerRoute: typeof ScannerRoute
   InscricaoTokenRoute: typeof InscricaoTokenRoute
 }
 
@@ -152,6 +178,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InscreverRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/scanner': {
+      id: '/scanner'
+      path: '/scanner'
+      fullPath: '/scanner'
+      preLoaderRoute: typeof ScannerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/_authenticated/config-leitor': {
+      id: '/_authenticated/config-leitor'
+      path: '/config-leitor'
+      fullPath: '/config-leitor'
+      preLoaderRoute: typeof AuthenticatedConfigLeitorRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/painel': {
       id: '/_authenticated/painel'
       path: '/painel'
@@ -170,10 +210,12 @@ declare module '@tanstack/react-router' {
 }
 
 interface AuthenticatedRouteRouteChildren {
+  AuthenticatedConfigLeitorRoute: typeof AuthenticatedConfigLeitorRoute
   AuthenticatedPainelRoute: typeof AuthenticatedPainelRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
+  AuthenticatedConfigLeitorRoute: AuthenticatedConfigLeitorRoute,
   AuthenticatedPainelRoute: AuthenticatedPainelRoute,
 }
 
@@ -186,6 +228,7 @@ const rootRouteChildren: RootRouteChildren = {
   AdminSetupRoute: AdminSetupRoute,
   AuthRoute: AuthRoute,
   InscreverRoute: InscreverRoute,
+  ScannerRoute: ScannerRoute,
   InscricaoTokenRoute: InscricaoTokenRoute,
 }
 export const routeTree = rootRouteImport
