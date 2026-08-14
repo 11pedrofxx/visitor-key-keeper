@@ -158,6 +158,50 @@ export type Database = {
         }
         Relationships: []
       }
+      scanner_devices: {
+        Row: {
+          active: boolean
+          created_at: string
+          created_by: string | null
+          id: string
+          last_used_at: string | null
+          nome: string
+          room_id: string
+          token: string
+          updated_at: string
+        }
+        Insert: {
+          active?: boolean
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          last_used_at?: string | null
+          nome: string
+          room_id: string
+          token: string
+          updated_at?: string
+        }
+        Update: {
+          active?: boolean
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          last_used_at?: string | null
+          nome?: string
+          room_id?: string
+          token?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "scanner_devices_room_id_fkey"
+            columns: ["room_id"]
+            isOneToOne: false
+            referencedRelation: "rooms"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       user_roles: {
         Row: {
           created_at: string
