@@ -177,7 +177,7 @@ function Home() {
             <h1>Auditório para uso</h1>
           </nav>
           <p>
-            Estrutura preparada para <span>palestras</span> e <span>apresentações</span>, com sistema de som e projeção de alta qualidade. 
+            Estrutura preparada para <span>palestras</span> e <span>apresentações</span>&nbsp;com sistema de som e projeção de alta qualidade.
           </p>
         </div>
       </nav>
