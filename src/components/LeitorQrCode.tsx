@@ -72,8 +72,9 @@ export function LeitorQrCode({ ativo, onLeitura }: Props) {
     return () => {
       cancelado = true;
       controls?.stop();
-      const stream = videoRef.current?.srcObject as MediaStream | null;
       stream?.getTracks().forEach((t) => t.stop());
+      const atual = videoRef.current?.srcObject as MediaStream | null;
+      atual?.getTracks().forEach((t) => t.stop());
     };
   }, [ativo, onLeitura]);
 
