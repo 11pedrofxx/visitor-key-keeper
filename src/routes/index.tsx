@@ -174,11 +174,10 @@ function Home() {
         <div className="boxbaixa">
           <nav className="topo">
             <img src="/pictures/vecteezy_auditorium-vector-icon-design_16952346.jpg" alt="Ícone de auditório" />
-            <h1>Salas com Espaço Amplo</h1>
+            <h1>Auditório para uso</h1>
           </nav>
           <p>
-            Ambientes <span>confortáveis,</span> bem iluminados e organizados, garantindo mais <span>liberdade</span> e
-            interação nas atividades.
+            Estrutura preparada para <span>palestras</span> e <span>apresentações</span>, com sistema de som e projeção de alta qualidade. 
           </p>
         </div>
       </nav>
