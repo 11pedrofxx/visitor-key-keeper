@@ -37,7 +37,13 @@ const camposIniciais: RegistrationInput = {
   aluno_frei: "",
 };
 
-const OPCOES_COMO_SOUBE = ["Familiar", "Amigos", "Redes sociais", "Ex-freiano (ex-aluno da escola)"] as const;
+const OPCOES_COMO_SOUBE = [
+  "Familiar",
+  "Amigos",
+  "Redes sociais",
+  "Ex-freiano (ex-aluno da escola)",
+  "Vou trabalhar na feira",
+] as const;
 
 const OPCOES_CURSOS = [
   "Curso Técnico em Administração",

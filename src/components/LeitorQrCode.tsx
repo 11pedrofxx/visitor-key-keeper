@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import { BrowserMultiFormatReader } from "@zxing/browser";
+import { BrowserQRCodeReader } from "@zxing/browser";
+import { DecodeHintType } from "@zxing/library";
 
 type Props = {
   ativo: boolean;
@@ -16,7 +17,10 @@ export function LeitorQrCode({ ativo, onLeitura }: Props) {
     if (!ativo) return;
     let controls: { stop: () => void } | undefined;
     let cancelado = false;
-    const reader = new BrowserMultiFormatReader();
+    let stream: MediaStream | undefined;
+    const hints = new Map();
+    hints.set(DecodeHintType.TRY_HARDER, false);
+    const reader = new BrowserQRCodeReader(hints, { delayBetweenScanAttempts: 80 });
     setErro("");
     setIniciando(true);
 
@@ -24,22 +28,31 @@ export function LeitorQrCode({ ativo, onLeitura }: Props) {
       try {
         if (!navigator.mediaDevices?.getUserMedia) {
           setErro("Este dispositivo ou navegador não permite o uso da câmera. Use a busca manual pelo código.");
+          setIniciando(false);
           return;
         }
         const video = videoRef.current;
         if (!video) return;
 
-        controls = await reader.decodeFromConstraints(
-          { video: { facingMode: { ideal: "environment" } } },
-          video,
-          (result) => {
-            if (!result || bloqueioRef.current) return;
-            bloqueioRef.current = true;
-            setTimeout(() => (bloqueioRef.current = false), 2500);
-            onLeitura(result.getText().trim());
-          },
-        );
-        if (cancelado) controls.stop();
+        // Pede a câmera imediatamente e mostra a imagem antes de iniciar a decodificação.
+        stream = await navigator.mediaDevices.getUserMedia({
+          video: { facingMode: { ideal: "environment" }, width: { ideal: 1280 }, height: { ideal: 720 } },
+        });
+        if (cancelado) {
+          stream.getTracks().forEach((t) => t.stop());
+          return;
+        }
+        video.srcObject = stream;
+        await video.play().catch(() => undefined);
+        setIniciando(false);
+
+        controls = await reader.decodeFromStream(stream, video, (result) => {
+          if (!result || bloqueioRef.current) return;
+          bloqueioRef.current = true;
+          setTimeout(() => (bloqueioRef.current = false), 2500);
+          onLeitura(result.getText().trim());
+        });
+        if (cancelado) controls?.stop();
       } catch (e) {
         const nome = (e as { name?: string })?.name ?? "";
         if (nome === "NotAllowedError" || nome === "SecurityError") {
@@ -59,8 +72,9 @@ export function LeitorQrCode({ ativo, onLeitura }: Props) {
     return () => {
       cancelado = true;
       controls?.stop();
-      const stream = videoRef.current?.srcObject as MediaStream | null;
       stream?.getTracks().forEach((t) => t.stop());
+      const atual = videoRef.current?.srcObject as MediaStream | null;
+      atual?.getTracks().forEach((t) => t.stop());
     };
   }, [ativo, onLeitura]);
 
