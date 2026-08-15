@@ -133,7 +133,7 @@ function Home() {
       <div className="espacoo">
         <h1 className="Fraseestru">Nossa Estrutura</h1>
         <p className="frasesalas">
-          Conheça nossas salas <span>moderna</span> e espaços de <span>aprendizado</span>
+          Conheça nossas salas <span>modernas</span> e espaços de <span>aprendizado</span>
         </p>
       </div>
 
