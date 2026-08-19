@@ -1320,7 +1320,8 @@ font-family: "Montserrat", sans-serif;
   .botao { margin-right: 0; padding: 1.2rem; }
 
   .espacofrase { height: auto; min-height: 40rem; padding: 5rem 2rem; }
-  .fraseefeito { font-size: clamp(3rem, 7vw, 4.8rem); }
+  .fraseefeito { font-size: clamp(2.8rem, 6.4vw, 4.8rem); max-width: 58rem; }
+  .fraseefeito br { display: none; }
   .botoes { display: flex; flex-direction: column; gap: 1.2rem; width: min(100%, 34rem); }
   .botoes br { display: none; }
   .botao1, .botao2 { margin-right: 0; width: 100%; }
@@ -1386,7 +1387,7 @@ font-family: "Montserrat", sans-serif;
   header ul { width: 100%; }
   ul li { font-size: 1.35rem; }
   .botao { width: 100%; }
-  .fraseefeito { font-size: 3rem; }
+  .fraseefeito { font-size: clamp(2.4rem, 7.4vw, 3rem); max-width: 40rem; }
   .fraseefeito1 { font-size: 3rem; }
   .frasefrei { font-size: 1.9rem; }
   .fraseleft h1 { font-size: 3.3rem; }
