@@ -510,6 +510,78 @@ font-family: "Montserrat", sans-serif;
 
 }
 
+/* Ajuste responsivo dos cards da seção "Nossa Estrutura" */
+.quadrados {
+    width: 100%;
+    max-width: 125rem;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: stretch;
+    gap: 3rem;
+    box-sizing: border-box;
+}
+
+.quadrados > br { display: none; }
+
+.boxleft,
+.boxright,
+.boxbaixa {
+    width: min(57rem, 100%);
+    max-width: 100%;
+    height: auto;
+    min-height: 15rem;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.boxleft .topo,
+.boxright .topo,
+.boxbaixa .topo {
+    width: 100%;
+    gap: 1.6rem;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.boxleft .topo img,
+.boxright .topo img,
+.boxbaixa .topo img {
+    margin-left: 0;
+    flex-shrink: 0;
+}
+
+.boxleft .topo h1,
+.boxright .topo h1,
+.boxbaixa .topo h1 {
+    margin-left: 0;
+    text-align: left;
+    line-height: 1.2;
+}
+
+.boxleft p,
+.boxright p,
+.boxbaixa p {
+    margin: 0;
+    width: 100%;
+}
+
+.Modric {
+    width: 100%;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    box-sizing: border-box;
+}
+
+
+
 .Modric{
     display: flex;
     align-items: center;
